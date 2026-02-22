@@ -53,5 +53,16 @@ Results
 This section will summarize:
 • Relationship between key parameters and yield  
 • Outlier and distribution insights  
-• Feature engineering outcomes  
+• Feature engineering outcomes
+
+Repository Structure
+• README.md
+• capstone_eda.ipynb
+• data/
+• synthetic_yield_data.csv(to be added)
+
+Notebook Link
+The full analysis is available in:
+'capstone_eda.ipynb'
+
 • Baseline model performance and interpretation
