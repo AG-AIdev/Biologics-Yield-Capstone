@@ -8,70 +8,70 @@ Expected Data Source
 Due to the proprietary nature of the biologics manufacturing industry, real process data was not available for this project. Instead, a synthetic dataset will be generated to reflect realistic upstream conditions in fermentation and cell culture. The dataset will simulate batch-level production records, structured in a table format, where each row represents a batch. 
 
 Data Structure
-	• Input features: mixing time, temperature, pH, dissolved oxygen
-	• Target variable: final batch yield
+	- Input features: mixing time, temperature, pH, dissolved oxygen
+	- Target variable: final batch yield
 
 The synthetic data will be generated considering domain knowledge of biologics operations to ensure realistic parameter ranges and biologically plausible relationship.
 
 Methods
 This milestone includes the following components:
-  • Synthetic data generation  
-  • Data cleaning (missing values, duplicates, outliers)  
-  • Exploratory Data Analysis (EDA)  
-  • Feature engineering  
-  • Baseline regression model (e.g., Linear Regression or Random Forest)  
-  • Evaluation using metrics such as RMSE, MAE, and R²  
+  - Synthetic data generation  
+  - Data cleaning (missing values, duplicates, outliers)  
+  - Exploratory Data Analysis (EDA)  
+  - Feature engineering  
+  - Baseline regression model (e.g., Linear Regression or Random Forest)  
+  - Evaluation using metrics such as RMSE, MAE, and R²  
 
 All analysis will be performed in the Jupyter notebook.
 
 Techniques I Expect to Use
-	• Exploratory Data Analysis (EDA): to assess parameter distributions, correlations, and identify potential outliers.
-	• Linear Regression with LASSO regularization: to measure the relationship between process parameters and yield, and to eliminate non-contributing variables.
-	• Random Forest Regression: to capture potential non-linear effects and parameter interactions.
-	• Model evaluation: using train/test split and cross-validation with metrics such as RMSE and (R^2).
-	• Visualization: including yield vs. parameter plots.
+	- Exploratory Data Analysis (EDA): to assess parameter distributions, correlations, and identify potential outliers.
+	- Linear Regression with LASSO regularization: to measure the relationship between process parameters and yield, and to eliminate non-contributing variables.
+	- Random Forest Regression: to capture potential non-linear effects and parameter interactions.
+	- Model evaluation: using train/test split and cross-validation with metrics such as RMSE and (R^2).
+	- Visualization: including yield vs. parameter plots.
 
 Expected Results
-	• A model capable of predicting upstream process parameters that are most likely to increase yield.
-	• Identification of the most influential process variables to increase yield.
-	• Insight into optimal parameter ranges associated with higher yield.
-	• Comparative performance analysis between linear and non-linear models.
-	• Visual tools to support decision-making and process optimization.
+	- A model capable of predicting upstream process parameters that are most likely to increase yield.
+	- Identification of the most influential process variables to increase yield.
+	- Insight into optimal parameter ranges associated with higher yield.
+	- Comparative performance analysis between linear and non-linear models.
+	- Visual tools to support decision-making and process optimization.
 
 Why This Question Is Important
 In the biotech industry, upstream operations (fermentation and cell culture) are critical to determining final yield. These manufacturing stages involve complex biological systems where small deviations in process parameters can lead to significant yield variability. This question is important because currently, many decisions around mixing time, temperature, pH, and dissolved oxygen are mostly based on experience, conservative ranges, and limited experimentation.
 
 This project intends to address how to use historical process inputs and outputs into actionable, data-driven guidance. By modeling the relationship between upstream parameters and yield, we can:
-	• Reduce reliance on trial-and-error which can potentially lead to a faster time to market (from clinical to commercial) and to higher yield
-	• Improve efficiency
-	• Enable digitalization strategies
-  • Support Pharma 4.0 initiatives, including digital twins and automated process control
+	- Reduce reliance on trial-and-error which can potentially lead to a faster time to market (from clinical to commercial) and to higher yield
+	- Improve efficiency
+	- Enable digitalization strategies
+  	- Support Pharma 4.0 initiatives, including digital twins and automated process control
 
 Ultimately, answering this question supports a shift in the development process, which is from a reactive troubleshooting mindset to proactive / predictive process control enabling biologics manufacturers to deliver high-quality products more efficiently and reliably at a lower cost.
 
 Results
 Conclusions
-This analysis demonstrates how upstream process parameters influence biologics yield in a controlled synthetic environment. The generated dataset reflects realistic bioprocess dynamics, including nonlinear sensitivity to temperature, pH, and dissolved oxygen. EDA confirmed these relationships, showing yield penalties when parameters drift outside biologically optimal ranges. The baseline linear regression model provided an initial benchmark (RMSE ≈ 6.85, R² ≈ 0.13), highlighting that linear methods are insufficient to capture the inherent nonlinearities of the system.
+This analysis demonstrates how upstream process parameters can have an impact on the yield of biologics products in a controlled synthetic environment. The generated dataset reflects realistic bioprocess dynamics, including nonlinear sensitivity to temperature, pH, and dissolved oxygen. EDA confirmed these relationships, showing how yield was affected when parameters drift outside optimal ranges. The baseline linear regression model provided an initial benchmark (RMSE ≈ 6.85, R² ≈ 0.13), highlighting that linear methods are not sufficient to capture the inherent nonlinearities of the system.
 
 Next Steps
-To improve predictive accuracy and deepen process understanding, the following steps are recommended:
-- Model Enhancements: Evaluate nonlinear models such as Random Forests, Gradient Boosting, or Polynomial Regression.  
+To improve predictive accuracy and increase process understanding, the following steps are recommended:
+- Model Enhancements: Evaluate nonlinear models (e.g., Random Forests, Gradient Boosting, or Polynomial Regression).  
 - Feature Engineering: Incorporate engineered features (e.g., squared deviations from optimal setpoints, interaction terms).  
-- Hyperparameter Optimization: Use grid search or randomized search to tune model parameters.  
-- Model Validation: Apply k‑fold cross‑validation to assess generalizability and reduce variance.  
-- Process Insights: Use feature importance or SHAP values to quantify which upstream parameters most strongly drive yield outcomes.  
+- Hyperparameter Optimization: Use grid search or randomized search for tunning of model parameters.  
+- Model Validation: Use k‑fold cross‑validation to evaluate how well the model generalizes and reduce variance.  
+- Process Insights: Use feature importance or SHAP values to quantify which upstream parameters most strongly drive stronger yield outcomes.  
 
-These steps will support a more accurate and interpretable model capable of informing upstream process optimization strategies.
+These steps will enable a more accurate and interpretable model that can support upstream process optimization decisions.
 
 
 Repository Structure
-• README.md
-• capstone_eda.ipynb
-• data/
-• synthetic_yield_data.csv(to be added)
+- README.md
+- capstone_eda.ipynb
+- data/
+- synthetic_yield_data.csv(to be added)
 
 Notebook Link
 The full analysis is available in:
 'capstone_eda.ipynb'
 
-• Baseline model performance and interpretation
+- Baseline model performance and interpretation
