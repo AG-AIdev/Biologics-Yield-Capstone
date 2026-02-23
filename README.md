@@ -50,10 +50,19 @@ This project intends to address how to use historical process inputs and outputs
 Ultimately, answering this question supports a shift in the development process, which is from a reactive troubleshooting mindset to proactive / predictive process control enabling biologics manufacturers to deliver high-quality products more efficiently and reliably at a lower cost.
 
 Results
-This section will summarize:
-• Relationship between key parameters and yield  
-• Outlier and distribution insights  
-• Feature engineering outcomes
+Conclusions
+This analysis demonstrates how upstream process parameters influence biologics yield in a controlled synthetic environment. The generated dataset reflects realistic bioprocess dynamics, including nonlinear sensitivity to temperature, pH, and dissolved oxygen. EDA confirmed these relationships, showing yield penalties when parameters drift outside biologically optimal ranges. The baseline linear regression model provided an initial benchmark (RMSE ≈ 6.85, R² ≈ 0.13), highlighting that linear methods are insufficient to capture the inherent nonlinearities of the system.
+
+Next Steps
+To improve predictive accuracy and deepen process understanding, the following steps are recommended:
+- Model Enhancements: Evaluate nonlinear models such as Random Forests, Gradient Boosting, or Polynomial Regression.  
+- Feature Engineering: Incorporate engineered features (e.g., squared deviations from optimal setpoints, interaction terms).  
+- Hyperparameter Optimization: Use grid search or randomized search to tune model parameters.  
+- Model Validation: Apply k‑fold cross‑validation to assess generalizability and reduce variance.  
+- Process Insights: Use feature importance or SHAP values to quantify which upstream parameters most strongly drive yield outcomes.  
+
+These steps will support a more accurate and interpretable model capable of informing upstream process optimization strategies.
+
 
 Repository Structure
 • README.md
